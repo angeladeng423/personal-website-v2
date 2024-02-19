@@ -1,23 +1,19 @@
-// ThemeContext.js
-
 import React, { createContext, useState } from 'react';
 
-// Create the context
-const ThemeContext = createContext();
+const RainContext = createContext();
 
-// Create a provider component
-const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light');
+const RainProvider = ({ children }) => {
+    const [rain, setRain] = useState("invisible");
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
+    function toggleRain(){
+        setRain((prevRain) => (prevRain === "visible" ? "invisible" : "visible"));
+    }
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+    return (
+        <RainContext.Provider value={{ rain, toggleRain }}>
+            {children}
+        </RainContext.Provider>
+    );
 };
 
-export { ThemeContext, ThemeProvider };
+export { RainContext, RainProvider };

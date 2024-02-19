@@ -1,23 +1,27 @@
-import { useState } from 'react'
-import '../components-css/Button.css'
+import { useContext, useEffect, useState } from 'react';
+import '../components-css/Button.css';
+import { RainContext } from '../context/RainContext';
+import { TagContext } from '../context/TagContext';
+
 
 function Button(props){
-    const [clicked, setClicked] = useState(false)
-    const [visible, setVisible] = useState("invisible")
+    const [func, setFunc] = useState(() => {})
+    const { toggleRain } = useContext(RainContext)
+    const { toggleTag } = useContext(TagContext)
 
-    function checkClicked(){
-        setClicked(!clicked)
-    }
-
-    if(props.function === "rain" && clicked === true){
-        setVisible("visible")
-    }
+    useEffect(() => {
+        if(props.function === "rain"){
+            setFunc(() => toggleRain)
+        } else if (props.function === "tag"){
+            setFunc(() => toggleTag)
+        }
+    }, [])
 
     return(
-        <div className = "button" onClick = {checkClicked}>
+        <div className = "button" onClick = {func}>
             {props.text}
         </div>
     )
 }
 
-export default Button
+export default Button;

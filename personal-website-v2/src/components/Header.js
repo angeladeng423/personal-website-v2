@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import '../components-css/Header.css';
+import { RainContext } from '../context/RainContext';
 import Line from '../header-design/Line';
 import dots from '../images/dots.png';
 import me2 from "../images/me2png.png";
 import me from '../images/mepng.png';
 
+import Rain from '../header-design/Rain';
+
 function Header(){
     const [currentImg, setCurrentImg] = useState(me)
+    const { rain } = useContext(RainContext)
 
     function checkImg(img){
         if(img === me){
@@ -16,8 +20,18 @@ function Header(){
         }
     }
 
+    const numberOfRainComponents = Math.floor(Math.random() * (40 - 15 + 1) + 15);
+
+    const rainComponents = Array.from({ length: numberOfRainComponents }, (_, index) => {
+        const num = Math.floor(Math.random() * 10);
+      
+        return <Rain key={index} id={rain} num={num} />;
+    });
+
     return(
         <div id = "header-bck">
+            {rainComponents}
+
             <div className = "circle" id = "one"></div>
             <div className = "circle" id = "two"></div>
             <div className = "circle" id = "three"></div>
