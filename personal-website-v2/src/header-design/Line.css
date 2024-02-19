@@ -1,0 +1,74 @@
+#v1{
+    animation: move 2s infinite;
+    animation-delay: 1s;
+}
+
+#v2{
+    animation: move 2s infinite;
+    animation-delay: 3s;
+}
+
+#v3{
+    animation: move 2s infinite;
+    animation-delay: 2s;
+}
+
+#v4{
+    animation: move 2s infinite;
+    animation-delay: 1s;
+}
+
+#v5{
+    animation: move 2s infinite;
+    animation-delay: 3s;
+}
+
+#v6{
+    animation: move 2s infinite;
+    animation-delay: 2s;
+}
+
+#h1{
+    animation: sideways 2s infinite;
+    animation-delay: 1s;
+}
+
+#h2{
+    animation: sideways 2s infinite;
+    animation-delay: 3s;
+}
+
+#h3{
+    animation: sideways 2s infinite;
+    animation-delay: 2s;
+}
+
+#h4{
+    animation: sideways 2s infinite;
+    animation-delay: 1s;
+}
+
+#h5{
+    animation: sideways 2s infinite;
+    animation-delay: 3s;
+}
+
+#h6{
+    animation: sideways 2s infinite;
+    animation-delay: 2s;
+}
+
+
+.hl:hover{
+    animation: sideways 2s infinite;
+}
+
+@keyframes move {
+    0% {transform: translate3d(0px, 0, 0)}
+    50% {transform: translate3d(0px, 20px, 0)}
+}
+
+@keyframes sideways {
+    0% {transform: translate3d(0px, 0, 0)}
+    50% {transform: translate3d(20px, 0px, 0)}
+}

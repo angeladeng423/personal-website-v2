@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282828;
+  height: 300vh;
+  overflow-x: hidden;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+ }
