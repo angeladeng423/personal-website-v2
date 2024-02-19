@@ -15,10 +15,7 @@
     position: absolute;
     top: 0;
     z-index: 101;
-    animation: chase 3s linear infinite;
-}
-
-@keyframes chase {
-    0% { transform: translate3d(var(--oldx), var(--oldy), 0); }
-    100% { transform: translate3d(var(--x), var(--y), 0); }
+    transition: 0.2s;
+    left: var(--oldx);
+    top: var(--oldy)
 }
