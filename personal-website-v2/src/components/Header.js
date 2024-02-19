@@ -1,9 +1,21 @@
+import { useState } from 'react';
 import '../components-css/Header.css';
 import Line from '../header-design/Line';
 import dots from '../images/dots.png';
+import me2 from "../images/me2png.png";
 import me from '../images/mepng.png';
 
 function Header(){
+    const [currentImg, setCurrentImg] = useState(me)
+
+    function checkImg(img){
+        if(img === me){
+            setCurrentImg(me2)
+        } else{
+            setCurrentImg(me)
+        }
+    }
+
     return(
         <div id = "header-bck">
             <div className = "circle" id = "one"></div>
@@ -11,8 +23,12 @@ function Header(){
             <div className = "circle" id = "three"></div>
             <div className = "circle" id = "four"></div>
 
-            <img src = {me} id = "portrait"></img>
+            <p className = "header-text">ANGELA DENG</p>
+            <p className = "header-text" id = "header-text-bck">ANGELA DENG</p>
+            <img src = {currentImg} id = "portrait" onClick = {() => {checkImg(currentImg)}}></img>
             <img src = {dots} id = "portrait-bck"></img>
+
+            <p></p>
 
             <Line lineType = "vl" height = "50vh" left = "85vw" id = "v1"/>
             <Line lineType = "vl" height = "40vh" left = "70vw" top = "15vh" id = "v2"/>

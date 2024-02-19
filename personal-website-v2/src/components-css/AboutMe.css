@@ -1,0 +1,103 @@
+.about-me-div{
+    background-color: #525252;
+    position: absolute;
+    width: 37vw;
+    height: 18vh;
+    z-index: 100;
+    border-radius: 15px;
+    left: 47.5vw;
+    top: 52vh;
+    padding: 20px;
+    color: white;
+    font-family: 'Inter', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-div:hover{
+    animation: bounce 2s cubic-bezier(0.2, 0.82, 0.165, 1) infinite;
+}
+
+.about-me-div p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#small-text{
+    font-weight: 200;
+    margin-top: 2vh;
+}
+
+.about-me-div span{
+    position: relative;
+}
+
+.about-me-div span::before{
+    font-size: 20px;
+    font-weight: 800;
+    color: #1E1E1E;
+    content: "";
+    animation: words 20s infinite;
+}
+
+.about-me-div span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #525252;
+    border-left: 2px solid #1E1E1E;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid #525252;
+    }
+}
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-15px);}
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Software Engineer";
+    }
+    21%,40%{
+        content: "3rd Year Student";
+    }
+    41%,60%{
+        content: "UI/UX Designer";
+    }
+    61%,80%{
+        content: "Full Stack Developer";
+    }
+    81%,100%{
+        content: "Boba Enthusiast";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    .about-me-div{
+        left: 44vw;
+    }
+    .about-me-div p{
+        font-size: 25px;
+    }
+    .about-me-div span::before{
+        font-size: 25px;
+    }
+}
