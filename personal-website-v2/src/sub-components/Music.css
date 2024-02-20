@@ -1,0 +1,16 @@
+#record-player{
+    background-color: #525252;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 15px;
+    margin: 2vh;
+}
+
+#disc-choice{
+    background-color: #343434;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 15px;
+    margin: 2vh;
+
+}

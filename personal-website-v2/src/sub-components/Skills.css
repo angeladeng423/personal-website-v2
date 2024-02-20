@@ -2,8 +2,8 @@
     background-color: lightgrey;
     padding: 8px;
     border-radius: 10px;
-    margin-left: 1vw;
     margin-top: 1vh;
+    margin-right: 1vw;
 }
 
 #skill:hover, #clicked:hover{
@@ -17,8 +17,8 @@
     background-color: darkgrey;
     padding: 8px;
     border-radius: 10px;
-    margin-left: 1vw;
     margin-top: 1vh;
+    margin-right: 1vw;
 }
 
 #skill p, #clicked p{

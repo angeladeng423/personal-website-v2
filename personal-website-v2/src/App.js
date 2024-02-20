@@ -1,14 +1,14 @@
 import './App.css';
 import AboutMe from './components/AboutMe';
 import Button from './components/Button';
+import CoolSect from './components/CoolSect';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import TagCont from './components/TagCont';
-import Skills from './sub-components/Skills';
-
 import { ClickedProvider } from './context/ClickedContext';
 import { RainProvider } from './context/RainContext';
 import { TagProvider } from './context/TagContext';
+import Skills from './sub-components/Skills';
 
 function App() {
   return (
@@ -65,6 +65,8 @@ function App() {
                 </div>
               </div>
             </div>
+
+            <CoolSect/>
           </div>
         </RainProvider>
       </TagProvider>
