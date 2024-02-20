@@ -1,0 +1,38 @@
+#skill{
+    background-color: lightgrey;
+    padding: 8px;
+    border-radius: 10px;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+#skill:hover, #clicked:hover{
+    transition: 0.5s;
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
+#clicked{
+    transition: 0.5s;
+    background-color: darkgrey;
+    padding: 8px;
+    border-radius: 10px;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+#skill p, #clicked p{
+    margin: 0;
+    font-weight: 800;
+    font-size: 15px;
+    color: #313D40;
+}
+
+@media screen and (min-width: 1200px){
+    #skill p, #clicked p{
+        font-size: 19px;
+    }
+    #skill, #clicked{
+        margin-top: 1.5vh;
+    }
+}

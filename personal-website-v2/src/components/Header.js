@@ -1,12 +1,12 @@
 import { useContext, useState } from 'react';
 import '../components-css/Header.css';
 import { RainContext } from '../context/RainContext';
-import Line from '../header-design/Line';
 import dots from '../images/dots.png';
 import me2 from "../images/me2png.png";
 import me from '../images/mepng.png';
-
-import Rain from '../header-design/Rain';
+import outline from '../images/outline.png';
+import Line from '../sub-components/Line';
+import Rain from '../sub-components/Rain';
 
 function Header(){
     const [currentImg, setCurrentImg] = useState(me)
@@ -35,15 +35,17 @@ function Header(){
             <div className = "circle" id = "one"></div>
             <div className = "circle" id = "two"></div>
             <div className = "circle" id = "three"></div>
-            <div className = "circle" id = "four"></div>
+            <div className = "circle" id = "four">
+                <div id = "orbiting"></div>
+            </div>
 
+            <div className = "arc"></div>
             <p className = "header-text">ANGELA DENG</p>
             <p className = "header-text" id = "header-text-bck">ANGELA DENG</p>
             <img src = {currentImg} id = "portrait" onClick = {() => {checkImg(currentImg)}}></img>
             <img src = {dots} id = "portrait-bck"></img>
-
-            <p></p>
-
+            <img src = {outline} id = "outline"></img>
+            
             <Line lineType = "vl" height = "50vh" left = "85vw" id = "v1"/>
             <Line lineType = "vl" height = "40vh" left = "70vw" top = "15vh" id = "v2"/>
             <Line lineType = "vl" height = "27vh" left = "55vw" top = "28vh" id = "v3"/>

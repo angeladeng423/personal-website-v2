@@ -5,7 +5,7 @@
     --y: 0px;
 }
 
-#chase {
+#tagOn {
     color: white;
     background-color: black;
     border-radius: 100%;
@@ -18,4 +18,12 @@
     transition: 0.2s;
     left: var(--oldx);
     top: var(--oldy)
+}
+
+#tagOn:hover{
+    cursor: pointer;
+}
+
+.tagOff{
+    opacity: 0;
 }

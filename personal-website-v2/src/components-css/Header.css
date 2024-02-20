@@ -35,6 +35,13 @@
     width: 40vw;
 }
 
+#outline{
+    position: absolute;
+    left: -0.7vw;
+    top: 11.6vh;
+    width: 44vw;
+}
+
 #portrait-bck{
     position: absolute;
     z-index: 90;
@@ -61,11 +68,22 @@
     position: absolute;
 }
 
-.circle:hover{
-    animation: wiggle 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+.arc{
+    outline: 1px white solid;
+    left: -5%;
+    top: 1vh;
+    width: calc(14vw - 2*1px);
+    height: calc(14vw - 2*1px);
+    border-radius: 100%;
+    position: absolute;
+    animation: orbit 10s linear infinite;
+}
+
+#orbiting{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 100%;
+    border: 1px white solid;
 }
 
 #one{
@@ -94,6 +112,12 @@
     height: 15vw;
     left: 14vw;
     top: 16vh;
+    animation: orbit 5s linear infinite;
+}
+
+@keyframes orbit {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
 
 @keyframes wiggle{
@@ -141,6 +165,11 @@
         left: 7vw;
         top: 16vh;
         width: 40vw;
+    }
+    #outline{
+        width: 27vw;
+        left: 8.2vw;
+        top: 6vh
     }
     .header-text{
         top: 40vh;
