@@ -1,0 +1,34 @@
+#disc-one{
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+    display: flex;
+}
+
+#inner{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 100%;
+}
+
+#inner-inner{
+    background-color: #282828;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+}
+
+#disc-two{
+    background-color: #282828;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+}

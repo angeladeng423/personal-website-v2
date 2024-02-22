@@ -6,11 +6,23 @@
     margin: 2vh;
 }
 
-#disc-choice{
+#cat-dance{
     background-color: #343434;
     width: 30vw;
     height: 30vw;
     border-radius: 15px;
     margin: 2vh;
+}
 
+#cont-two{
+    display: flex;
+}
+
+#disc-choice{
+    width: 25vw;
+    height: calc(60vw + 2vh);
+    background-color: #343434;
+    border-radius: 15px;
+    margin-top: 2vh;
+    margin-right: 2vh;
 }
