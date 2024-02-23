@@ -6,7 +6,6 @@
     width: 20vw;
     height: 20vw;
     border-radius: 100%;
-    display: flex;
 }
 
 #inner{
@@ -31,4 +30,7 @@
     width: 20vw;
     height: 20vw;
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
