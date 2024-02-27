@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import './Catact.css'
+import { useEffect, useState } from 'react';
+import './Catact.css';
 
 function Catact(){
     const [catmoji, setCatmoji] = useState("  ／l\n（ﾟ､ ｡ ７\n  l  ~ヽ  \ \n  じしf_,)ノ")
@@ -29,7 +29,7 @@ function Catact(){
             <div id = "pet-da-cat">
                 <pre onMouseLeave = {() => {setPet(false)}} onMouseEnter = {() => {setCatmoji(catState[2]); setPet(true)}}>{catmoji}</pre>
             </div>
-            <div id = "contact">
+            <div id = "doodle-jump">
                 
             </div>
         </div>

@@ -57,13 +57,13 @@
   }
   
 
-#contact{
+#doodle-jump{
     background-color: #525252;
     width: 30vw;
     height: 35vw;
     border-radius: 15px;
-    margin-top: 2vh;
     margin-bottom: 2vh;
+    overflow: hidden;
 }
 
 @media screen and (min-width:1200px){

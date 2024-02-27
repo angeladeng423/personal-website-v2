@@ -9,6 +9,7 @@ function Tag() {
     const { tag } = useContext(TagContext);
     const [ meow, {stop}] = useSound(meowAudio, {
         interrupt: true,
+        volume: 0.5,
     });
     const mousePosition = useMousePosition();
     const [prevPosition, setPrevPosition] = useState({

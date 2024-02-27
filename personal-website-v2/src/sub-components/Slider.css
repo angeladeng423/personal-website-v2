@@ -1,0 +1,20 @@
+#slider{
+    background-color: #606060;
+    width: 20vw;
+    height: 2.5vh;
+    border-radius: 15px;
+    display: flex;
+}
+
+#select{
+    background-color: #B0B0B0;
+    width: 2vh;
+    height: 2vh;
+    margin-top: 0.25vh;
+    border-radius: 100%;
+    position: relative;
+}
+
+#select:hover{
+    cursor: pointer;
+}
