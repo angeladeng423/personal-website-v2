@@ -5,4 +5,11 @@
     z-index: 100;
     position: relative;
     background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Inter', 'sans-serif';
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
 }

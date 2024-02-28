@@ -1,6 +1,7 @@
 import './App.css';
 import AboutMe from './components/AboutMe';
 import Button from './components/Button';
+import Contact from './components/Contact';
 import CoolSect from './components/CoolSect';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
@@ -67,6 +68,7 @@ function App() {
             </div>
 
             <CoolSect/>
+            <Contact/>
           </div>
         </RainProvider>
       </TagProvider>

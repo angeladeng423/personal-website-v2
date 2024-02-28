@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Toggle.css";
 
-function Toggle() {
+function Toggle(props) {
+    const [playMusic, setPlayMusic] = useState("unclicked")
+
+    function handleMusic(){
+        if(playMusic === "unclicked"){
+            setPlayMusic("clicked")
+             props.handleMusic()
+        } else{
+            setPlayMusic("unclicked")
+            props.stopMusic()
+        }
+    }
 
     return (
-        <div id="toggle-btn">
-            
+        <div className = {playMusic} onClick={handleMusic}>
+            <img id = "icon" src = {props.icon}></img>
         </div>
     );
 }

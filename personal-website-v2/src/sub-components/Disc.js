@@ -4,7 +4,7 @@ import './Disc.css';
 
 const Disc = React.forwardRef((props, ref) => (
     <Draggable
-        bounds={{ top: -50 * window.innerHeight / 100, bottom: 50 * window.innerHeight / 100 }}>
+        bounds={{ top: -100 * window.innerHeight / 100, bottom: 50 * window.innerHeight / 100 }}>
         <div ref={ref}>
             <div id={props.diskType}>
                 <div id="inner">

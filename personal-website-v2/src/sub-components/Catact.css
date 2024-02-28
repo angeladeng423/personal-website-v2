@@ -64,6 +64,8 @@
     border-radius: 15px;
     margin-bottom: 2vh;
     overflow: hidden;
+    color: white;
+    font-family: 'Consolas', 'Inter', 'sans-serif'
 }
 
 @media screen and (min-width:1200px){

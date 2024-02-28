@@ -9,6 +9,17 @@ import './Music.css';
 import Slider from './Slider';
 import Toggle from './Toggle';
 
+// sound effects
+import birdMusic from '../audio/birds.mp3';
+import coffeeMusic from '../audio/coffee.mp3';
+import fireMusic from '../audio/fire.mp3';
+import rainMusic from '../audio/rain.mp3';
+
+import birdImg from '../images/bird.png';
+import cloudImg from '../images/cloud.png';
+import coffeeImg from '../images/coffee.png';
+import fireImg from '../images/fire.png';
+
 function Music(){
     const [discPlaying, setDiscPlaying] = useState(false)
     const [sliderValue, setSliderValue] = useState(0.5);
@@ -21,11 +32,33 @@ function Music(){
     const [ nostalgic, {sound: nostSound, stop: stopNostalgia}] = useSound(nostalgicMusic, {
         interrupt: true,
         volume: sliderValue,
+        loop: true
     });
 
     const [ romance, {sound: romanceSound, stop: stopRomantic}] = useSound(romanticMusic, {
         interrupt: true,
         volume: sliderValue,
+        loop: true
+    });
+
+    const [ rain, {stop: stopRain} ] = useSound(rainMusic, {
+        interrupt: true,
+        loop: true
+    });
+
+    const [ fire, {stop: stopFire} ] = useSound(fireMusic, {
+        interrupt: true,
+        loop: true
+    });
+
+    const [ bird, {stop: stopBird} ] = useSound(birdMusic, {
+        interrupt: true,
+        loop: true
+    });
+
+    const [ coffee, {stop: stopCoffee} ] = useSound(coffeeMusic, {
+        interrupt: true,
+        loop: true
     });
 
     function handleVolumeChange(newValue){
@@ -97,7 +130,10 @@ function Music(){
                         <img id = "volume-img" src = {volumeImg}></img>
                     </div>
                     <div id = "ambient">
-                        <Toggle/>
+                        <Toggle icon = {cloudImg} handleMusic = {rain} stopMusic = {stopRain}/>
+                        <Toggle icon = {fireImg} handleMusic = {fire} stopMusic = {stopFire}/>
+                        <Toggle icon = {birdImg} handleMusic = {bird} stopMusic = {stopBird}/>
+                        <Toggle icon = {coffeeImg} handleMusic = {coffee} stopMusic = {stopCoffee}/>
                     </div>
                 </div>
             </div>
